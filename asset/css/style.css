@@ -28,8 +28,13 @@ input {
   margin: 0 auto;
   padding: 0 20px;
 }
+.p-to-top {
+  padding-top: calc(var(--header-height) + 20px);
+}
 /* -----------HEADER----------- */
-
+header.sticky {
+  background-color: var(--main-backgorund);
+}
 header {
   height: var(--header-height);
   border-bottom: 2px solid #e7e2e2;
@@ -247,6 +252,11 @@ header .row-flex {
   color: #bdb9b9;
   margin-top: 6px;
 }
+.hot-product-price p {
+  font-size: 18px;
+  font-weight: var(--main-font-weight);
+  color: #000000;
+}
 .hot-product-price {
   display: flex;
   justify-content: space-between;
@@ -281,8 +291,43 @@ footer .row-grid {
   line-height: 32px;
   margin-top: 10px;
 }
+/* -----------------PRODUCT-DETAIL------------- */
+.row-flex-product-detail {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px;
+  position: relative;
+}
+.row-flex-product-detail i {
+  margin: 0px 12px;
+}
 
+.row-flex-product-detail::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  left: 0;
+  background-color: var(--main-color);
+}
+.row-flex-product-detail::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 5px;
+  left: 12px;
+  bottom: 0;
+  background-color: black;
+  border-radius: 20px;
+}
 /* responsion */
+@media screen and (max-width: 1200px) {
+  .hot-product-container {
+    grid-template-columns: repeat(4, 24%);
+  }
+}
 @media screen and (max-width: 922px) {
   .row-flex {
     padding: 12px;
@@ -327,13 +372,14 @@ footer .row-grid {
     cursor: pointer;
   }
 
-  /* responsive */
+  /* responsive hot product*/
   .hot-product-container {
     display: grid;
     grid-template-columns: repeat(2, 49%);
     gap: 20px;
     padding: 20px;
   }
+  /* responsive footer*/
   footer .row-grid {
     display: grid;
     grid-template-columns: repeat(2, 50%);
