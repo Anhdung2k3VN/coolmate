@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <script type="module" src="asset/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script src="asset/js/apiprovince.js"></script>
+  </head>
+  <body>
+    <!-- ---------------HEADER---------- -->
+    <header>
+      <div class="container">
+        <div class="row-flex">
+          <div class="header-bar-icon"><i class="ri-menu-line"></i></div>
+          <div class="header-logo">
+            <img src="asset/image/logo.png" alt="" />
+          </div>
+          <div class="header-nav">
+            <ul>
+              <li><a href="#">SẢN PHẨM</a></li>
+              <li><a href="#">ĐỒ THỂ THAO</a></li>
+              <li><a href="#">MẶC HẰNG NGÀY</a></li>
+              <li><a href="#">ĐỒ LÓT</a></li>
+              <li><a href="#">SẢN XUẤT RIÊNG</a></li>
+            </ul>
+          </div>
+          <div class="header-search">
+            <input type="text" placeholder="Tìm kiếm" />
+            <button><i class="ri-search-2-line"></i></button>
+          </div>
+          <div class="header-cart">
+            <i class="ri-shopping-cart-line" number="0"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ---------------CART---------- -->
+    <section class="cart p-to-top">
+      <div class="container">
+        <div class="row-flex row-flex-product-detail">
+          <p>Giỏ hàng</p>
+        </div>
+        <div class="row-grid">
+          <div class="cart-left">
+            <h2 class="main-h2">Chi tiết đơn hàng</h2>
+            <div class="cart-left-detail">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Ảnh</th>
+                    <th>Sản phẩm</th>
+                    <th>Thành tiền</th>
+                    <th>Xóa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img
+                        style="width: 70px"
+                        src="asset/image/product/WEB1/AoThun/2/2791307203580dc3fe8c3338c67dedf8.webp"
+                        alt=""
+                      />
+                    </td>
+                    <td>
+                      <div class="product-detail-right-info">
+                        <h1>Áo Thun Nam MS001</h1>
+
+                        <div class="product-price">
+                          <p>200.000đ <del>300.000đ</del></p>
+                        </div>
+                      </div>
+                      <div class="product-detail-right-quantity-input">
+                        <i class="ri-subtract-fill"></i>
+                        <input
+                          onkeydown="return false"
+                          class="quantity-input"
+                          type="number"
+                          value="1"
+                        />
+                        <i class="ri-add-line"></i>
+                      </div>
+                    </td>
+                    <td>
+                      <p>200.000đ</p>
+                    </td>
+                    <td>
+                      <i class="ri-delete-bin-line"></i>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img
+                        style="width: 70px"
+                        src="asset/image/product/WEB1/AoThun/1/1a57f10c3180ae22a0a8d1767ad4f85d.webp"
+                        alt=""
+                      />
+                    </td>
+                    <td>
+                      <div class="product-detail-right-info">
+                        <h1>Áo Thun Nam MS001</h1>
+
+                        <div class="product-price">
+                          <p>200.000đ <del>300.000đ</del></p>
+                        </div>
+                      </div>
+                      <div class="product-detail-right-quantity-input">
+                        <i class="ri-subtract-fill"></i>
+                        <input
+                          onkeydown="return false"
+                          class="quantity-input"
+                          type="number"
+                          value="1"
+                        />
+                        <i class="ri-add-line"></i>
+                      </div>
+                    </td>
+                    <td>
+                      <p>200.000đ</p>
+                    </td>
+                    <td>
+                      <i class="ri-delete-bin-line"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <button class="main-btn">Cập nhật giỏ hàng</button>
+              <a href="">Tiếp tục mua hàng >></a>
+            </div>
+          </div>
+          <div class="cart-right">
+            <h2 class="main-h2">Thông tin giao hàng</h2>
+            <div class="cart-right-input-name-phone">
+              <input type="text" placeholder="Tên" />
+              <input type="text" placeholder="Số điện thoại" />
+            </div>
+            <div class="cart-right-input-email">
+                <input type="text" placeholder="Email">
+            </div>
+            <div class="cart-right-input-select">
+                <select name=""  id="city">
+                    <option value="">Tỉnh/Tp</option>
+                </select>
+                <select name="" id="district">
+                    <option value="">Quận/Huyện</option>
+                </select>
+                <select name=""  id="ward">
+                    <option value="">Xã/Phường</option>
+                </select>
+          </div>
+          <div class="cart-right-input-address">
+            <input type="text" placeholder="Địa chỉ chi tiết">
+          </div>
+          <div class="cart-right-input-note">
+            <input type="text" placeholder="Ghi chú">
+          </div>
+          <br>
+          <button class="main-btn">Gủi Đơn Hàng</button>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------HOT PRODUCT---------- -->
+    <section class="hot-product">
+      <div class="container">
+        <div class="row-grid">
+          <p class="heading-text">SẢN PHẨM HOT</p>
+          <div class="hot-product-container">
+            <div class="hot-product-item row-grid">
+              <a href="">
+                <div class="hot-product-image">
+                  <img
+                    src="asset/image/product/WEB1/AoThun/1/1a57f10c3180ae22a0a8d1767ad4f85d.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="hot-product-info">
+                  <h3>Áo thun nam</h3>
+                  <span>100% Cotton</span>
+                  <div class="product-price">
+                    <p>200.000đ <del>300.000đ</del></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="hot-product-item row-grid">
+              <a href="">
+                <div class="hot-product-image">
+                  <img
+                    src="asset/image/product/WEB1/AoThun/2/cf636994487d7b3bd008a1fe422f5f70.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="hot-product-info">
+                  <h3>Áo thun nam</h3>
+                  <span>100% Cotton</span>
+                  <div class="product-price">
+                    <p>200.000đ <del>300.000đ</del></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="hot-product-item row-grid">
+              <a href="">
+                <div class="hot-product-image">
+                  <img
+                    src="asset/image/product/WEB1/AoThun/3/3df7f31fb3495812fca8bd7bc0883d32.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="hot-product-info">
+                  <h3>Áo thun nam</h3>
+                  <span>100% Cotton</span>
+                  <div class="product-price">
+                    <p>200.000đ <del>300.000đ</del></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="hot-product-item row-grid">
+              <a href="">
+                <div class="hot-product-image">
+                  <img
+                    src="asset/image/product/WEB1/AoThun/5/244124735cf9077cebc802d68c7ccc56.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="hot-product-info">
+                  <h3>Áo thun nam</h3>
+                  <span>100% Cotton</span>
+                  <div class="product-price">
+                    <p>200.000đ <del>300.000đ</del></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="hot-product-item row-grid">
+              <a href="">
+                <div class="hot-product-image">
+                  <img
+                    src="asset/image/product/WEB1/AoThun/6/567a746530d7fa09c1eb6f027ec2ca65.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="hot-product-info">
+                  <h3>Áo thun nam</h3>
+                  <span>100% Cotton</span>
+                  <div class="product-price">
+                    <p>200.000đ <del>300.000đ</del></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------FOOTER---------- -->
+    <footer>
+      <div class="container">
+        <div class="row-grid">
+          <div class="footer-item">
+            <p>COOLCLUB</p>
+            <p>Đăng ký thành viên</p>
+            <p>Ưu đãi & Đặc quyền</p>
+          </div>
+          <div class="footer-item">
+            <p>CHÍNH SÁCH</p>
+            <p>Chính sách bảo mật</p>
+            <p>Chính sách vận chuyển</p>
+            <p>Chính sách đổi trả</p>
+          </div>
+          <div class="footer-item">
+            <p>CHĂM SÓC KHÁCH HÀNG</p>
+            <p>Hotline: 1900 1234</p>
+            <p>Email: xxx</p>
+          </div>
+          <div class="footer-item">
+            <p>ĐỊA CHỈ LIÊN HỆ</p>
+            <p>Chi nhánh HCM: 47 đường 17, Linh Trung, Thủ Đức, TP.HCM</p>
+            <p>Thời gian làm việc: 8h - 22h</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
