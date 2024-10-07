@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coolmate Admin</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <script type="module" src="asset/js/script.js"></script>
+ </head>
+  <body>
+    <section class="admin">
+      <div class="row-grid">
+        <div class="admin-sidebar">
+          <div class="admin-sidebar-header">
+            <img src="../frontend/asset/image/logo.png" alt="" />
+          </div>
+          <div class="admin-sidebar-menu">
+            <ul>
+              <li>
+                <a href="#"
+                  ><i class="ri-dashboard-line"></i>Dashboard<i
+                    class="ri-add-box-line"
+                  ></i
+                ></a>
+                <ul class="sub-menu">
+                  <div class="sub-menu-items">
+                    <li>
+                      <a href="#"
+                        ><i class="ri-arrow-right-s-fill"></i>Tổng quan</a
+                      >
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="ri-file-list-line"></i>Đơn hàng<i
+                    class="ri-add-box-line"
+                  ></i
+                ></a>
+                <ul class="sub-menu">
+                  <div class="sub-menu-items">
+                    <li>
+                      <a href="#"
+                        ><i class="ri-arrow-right-s-fill"></i>Danh sách</a
+                      >
+                    </li>
+                  </div>
+                </ul>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="ri-file-list-line"></i>Sản phẩm<i
+                    class="ri-add-box-line"
+                  ></i
+                ></a>
+                <ul class="sub-menu">
+                  <div class="sub-menu-items">
+                    <li>
+                      <a href=""
+                        ><i class="ri-arrow-right-s-fill"></i>Danh sách</a
+                      >
+                    </li>
+                    <li>
+                      <a href=""
+                        ><i class="ri-arrow-right-s-fill"></i>Thêm mới</a
+                      >
+                    </li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="admin-content">
+          <div class="admin-content-top">
+            <div class="admin-content-top-left">
+              <div class="admin-content-top-left-item">
+                <i class="ri-search-line"></i>
+              </div>
+              <div class="admin-content-top-left-item">
+                <i class="ri-zoom-in-line"></i>
+              </div>
+            </div>
+            <div class="admin-content-top-right">
+              <div class="admin-content-top-right-item">
+                <i class="ri-notification-line" number ="3"></i>
+              </div>
+              <div class="admin-content-top-right-item">
+                <i class="ri-message-2-line" number ="5"></i>
+              </div>
+                <div class="admin-content-top-right-item">
+                    <img src="../frontend/asset/image/logo.png" alt="">
+                    <p>Admin<i class="ri-arrow-down-s-fill"></i></p>
+            </div>
+          </div>
+        </div>
+        <div class="admin-content-main">
+          <div class="admin-content-main-title">
+            <h2>Thêm sản phẩm</h2>
+          </div>
+          <div class="admin-content-main-content">
+            <!-- Nội dung -->
+             <div class="admin-content-main-content-two-input">
+                <input type="text" placeholder="Tên sản phẩm">
+                <input type="text" placeholder="Chất liệu">
+             </div>
+             <div class="admin-content-main-content-two-input">
+                <input type="text" placeholder="Giá bán">
+                <input type="text" placeholder="Giá giảm">
+             </div>
+             <textarea name="" id="editor" class="editor" cols="30" rows="10">Đặc điểm nổi bật</textarea>
+            <textarea name="" id="" cols="30" rows="10">Mô tả sản phẩm</textarea>
+                <div class="admin-content-main-content-input-image">
+                    <label for="file"><i class="ri-file-image-line"></i> Ảnh đại diện</label>
+                    <input id="file" type="file" >
+                </div>
+                <div class="admin-content-main-content-input-images">
+                    <label for="files"><i class="ri-folder-image-line"></i> Ảnh mô tả </label>
+                    <input id="files" multiple type="file" >
+                </div>
+                
+                <div class="admin-content-main-content-button">
+                    <button>Thêm sản phẩm</button>
+                </div>
+
+        </div>
+      </div>
+    </section>
+
+
+  </body>
+</html>
