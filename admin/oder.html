@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="asset/css/style.css" />
     <script type="module" src="asset/js/script.js"></script>
- </head>
+  </head>
   <body>
     <section class="admin">
       <div class="row-grid">
@@ -102,38 +102,61 @@
         </div>
         <div class="admin-content-main">
           <div class="admin-content-main-title">
-            <h2>Thêm sản phẩm</h2>
+            <h2>Danh sách đơn hàng</h2>
           </div>
           <div class="admin-content-main-content">
-            <!-- Nội dung -->
-             <div class="admin-content-main-content-product-add">
-             <div class="admin-content-main-content-two-input">
-                <input type="text" placeholder="Tên sản phẩm">
-                <input type="text" placeholder="Chất liệu">
+            <!-- Nội dung ở đây -->
+             <div class="admin-content-main-content-oder">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Địa chỉ</th>
+                            <th>Ghi chú</th>
+                            <th>Chi tiết</th>
+                            <th>Ngày</th>
+                            <th>Tình trạng</th>
+                            <th>Tùy chỉnh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>0123456789</td>
+                            <td> [email protected]</td>
+                            <td>123 Đường ABC</td>
+                            <td>Không</td>
+                            <td><a href=""  class="edit-class">Xem</a></td>
+                            <td>2021-09-01</td>
+                            <td><a href="" class="confirm-oder">Đã xác nhận</a></td>
+                            <td>
+                                <a href="" class="delete-class">Xóa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Nguyễn Văn A</td>
+                            <td>0123456789</td>
+                            <td> [email protected]</td>
+                            <td>123 Đường ABC</td>
+                            <td>Không</td>
+                            <td><a href=""  class="edit-class">Xem</a></td>
+                            <td>2021-09-01</td>
+                            <td><a href="" class="non-confirm-oder">Chưa xác nhận</a></td>
+                            <td>
+                                <a href="" class="delete-class">Xóa</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                 </table>
              </div>
-             <div class="admin-content-main-content-two-input">
-                <input type="text" placeholder="Giá bán">
-                <input type="text" placeholder="Giá giảm">
-             </div>
-             <textarea name="" id="editor" class="editor" cols="30" rows="10">Đặc điểm nổi bật</textarea>
-            <textarea name="" id="" cols="30" rows="10">Mô tả sản phẩm</textarea>
-                <div class="admin-content-main-content-input-image">
-                    <label for="file"><i class="ri-file-image-line"></i> Ảnh đại diện</label>
-                    <input id="file" type="file" >
-                </div>
-                <div class="admin-content-main-content-input-images">
-                    <label for="files"><i class="ri-folder-image-line"></i> Ảnh mô tả </label>
-                    <input id="files" multiple type="file" >
-                </div>
-                
-                <div class="admin-content-main-content-button">
-                    <button class="main-btn">Thêm sản phẩm</button>
-                </div>
-              </div>
+          </div>
         </div>
       </div>
     </section>
-
-
   </body>
 </html>

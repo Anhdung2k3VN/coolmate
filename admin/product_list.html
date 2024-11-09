@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="asset/css/style.css" />
     <script type="module" src="asset/js/script.js"></script>
- </head>
+  </head>
   <body>
     <section class="admin">
       <div class="row-grid">
@@ -102,38 +102,66 @@
         </div>
         <div class="admin-content-main">
           <div class="admin-content-main-title">
-            <h2>Thêm sản phẩm</h2>
+            <h2>Danh sách sản phẩm</h2>
           </div>
           <div class="admin-content-main-content">
-            <!-- Nội dung -->
-             <div class="admin-content-main-content-product-add">
-             <div class="admin-content-main-content-two-input">
-                <input type="text" placeholder="Tên sản phẩm">
-                <input type="text" placeholder="Chất liệu">
+            <!-- Nội dung ở đây -->
+             <div class="admin-content-main-content-product-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ảnh</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Giá bán</th>
+                            <th>Giá giảm</th>
+                            <th>Ngày đăng</th>
+                            <th>Tùy chỉnh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img style="width: 70px;" src="../frontend/asset/image/product/WEB1/AoThun/3/3df7f31fb3495812fca8bd7bc0883d32.webp" alt=""></td>
+                            <td>T-shirt Cotton MS001</td>
+                            <td>200.000đ</td>
+                            <td>100.000đ</td>
+                            <td>21/9/2003</td>
+                            <td>
+                            <a class="edit-class" href="">Sửa</a>
+                            <a class="delete-class" href="">Xóa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img style="width: 70px;" src="../frontend/asset/image/product/WEB1/AoThun/3/3df7f31fb3495812fca8bd7bc0883d32.webp" alt=""></td>
+                            <td>T-shirt Cotton MS001</td>
+                            <td>200.000đ</td>
+                            <td>100.000đ</td>
+                            <td>21/9/2003</td>
+                            <td>
+                            <a class="edit-class" href="">Sửa</a>
+                            <a class="delete-class" href="">Xóa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><img style="width: 70px;" src="../frontend/asset/image/product/WEB1/AoThun/3/3df7f31fb3495812fca8bd7bc0883d32.webp" alt=""></td>
+                            <td>T-shirt Cotton MS001</td>
+                            <td>200.000đ</td>
+                            <td>100.000đ</td>
+                            <td>21/9/2003</td>
+                            <td>
+                            <a class="edit-class" href="">Sửa</a>
+                            <a class="delete-class" href="">Xóa</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                 </table>
              </div>
-             <div class="admin-content-main-content-two-input">
-                <input type="text" placeholder="Giá bán">
-                <input type="text" placeholder="Giá giảm">
-             </div>
-             <textarea name="" id="editor" class="editor" cols="30" rows="10">Đặc điểm nổi bật</textarea>
-            <textarea name="" id="" cols="30" rows="10">Mô tả sản phẩm</textarea>
-                <div class="admin-content-main-content-input-image">
-                    <label for="file"><i class="ri-file-image-line"></i> Ảnh đại diện</label>
-                    <input id="file" type="file" >
-                </div>
-                <div class="admin-content-main-content-input-images">
-                    <label for="files"><i class="ri-folder-image-line"></i> Ảnh mô tả </label>
-                    <input id="files" multiple type="file" >
-                </div>
-                
-                <div class="admin-content-main-content-button">
-                    <button class="main-btn">Thêm sản phẩm</button>
-                </div>
-              </div>
+          </div>
         </div>
       </div>
     </section>
-
-
   </body>
 </html>
